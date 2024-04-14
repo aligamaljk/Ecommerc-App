@@ -8,6 +8,7 @@ import { AiFillCaretLeft } from "react-icons/ai";
 import { AiFillCaretRight } from "react-icons/ai";
 import { addToCart, viewToCart } from "../Redux/Actions/Cart-action";
 import { Button } from "react-bootstrap";
+import { PRODUCTS } from "../Data/Data";
 // import Demo from "../Pages/demo";
 const ProductsPage = () => {
   const [number, setNumber] = useState(1);
@@ -40,7 +41,7 @@ const ProductsPage = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-              {product.map((product) => (
+              {PRODUCTS.map((product) => (
                 <div key={product.id} className="col mb-5">
                   <div className="card h-100 m-auto">
                     <img
@@ -90,16 +91,16 @@ const ProductsPage = () => {
               ))}
             </div>
             <button
-              style={{ width: "fit-content", margin: "auto" }}
+              style={{ width: 'fit-content', margin: 'auto' }}
               className="btn btn-primary"
               onClick={() => setNumber(+number - 1)}
               disabled={number === 1}
             >
               <AiFillCaretLeft /> Prev Page
             </button>
-            <h2 style={{ width: "fit-content" }}> Page {number}</h2>
+            <h2 style={{ width: 'fit-content' }}> Page {number}</h2>
             <button
-              style={{ width: "fit-content", margin: "auto" }}
+              style={{ width: 'fit-content', margin: 'auto' }}
               className="btn btn-primary"
               onClick={() => setNumber(+number + 1)}
               disabled={number === 5}

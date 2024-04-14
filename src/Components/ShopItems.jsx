@@ -6,7 +6,8 @@ import ReactStars from "react-rating-star-with-type";
 
 import { addToCart, viewToCart } from "../Redux/Actions/Cart-action";
 import { Button } from "react-bootstrap";
-
+import { PRODUCTS } from "../Data/Data";
+console.log(PRODUCTS);
 function ShopItems() {
   const product = useSelector((state) => state.product);
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ function ShopItems() {
   return (
     <>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        {product.map((product) => (
+        {PRODUCTS.map((product) => (
           <div key={product.id} className="col mb-5">
             <div className="card h-100 m-auto">
               <img

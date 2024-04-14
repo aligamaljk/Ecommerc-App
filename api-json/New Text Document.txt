@@ -150,7 +150,6 @@ export const PRODUCTS = [
   },
 ];
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const PRODUCTS1 = [
   {
     id: 16,
