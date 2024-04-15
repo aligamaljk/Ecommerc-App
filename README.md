@@ -14,5 +14,5 @@
 -   react-router-dom
 -   react-icons
 -   vite
--   react-star-ratings
--   sass
+-   react-rating-star-with-type
+-   json-server
