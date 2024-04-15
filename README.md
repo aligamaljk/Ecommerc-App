@@ -8,9 +8,11 @@
 -   sass
 -   bootstrap
 -   react-redux
+-   react-query
 -   @reduxjs/toolkit
 -   axios
 -   react-router-dom
 -   react-icons
 -   vite
 -   react-star-ratings
+-   sass

@@ -1,19 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { fetchProducts } from "../Redux/Actions/Product-action";
 import ReactStars from "react-rating-star-with-type";
-
-import { addToCart, viewToCart } from "../Redux/Actions/Cart-action";
 import { Button } from "react-bootstrap";
 import { PRODUCTS } from "../Data/Data";
 console.log(PRODUCTS);
 function ShopItems() {
-  const product = useSelector((state) => state.product);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
   return (
     <>
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
@@ -42,10 +32,6 @@ function ShopItems() {
                   </p>
                   <Link to={`/details/${product.id}`}>
                     <div
-                      onClick={() => {
-                        // console.log(product);
-                        dispatch(viewToCart(product));
-                      }}
                     >
                       View Details
                     </div>
@@ -54,9 +40,7 @@ function ShopItems() {
                 <div className="d-flex justify-content-center">
                   <Button
                     className="myButton btn  w-100 text-centar"
-                    onClick={() => {
-                      dispatch(addToCart(product));
-                    }}
+                    
                   >
                     Add To Cart
                   </Button>

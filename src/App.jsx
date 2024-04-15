@@ -14,7 +14,6 @@ import Details from "./Pages/Details";
 import Blo from "./Pages/Blo";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import ProductsPage from "./Components/ProductsPage";
-// import { ReactQueryDevtools } from "react-query/devtools";
 const queryClient = new QueryClient();
 
 function App() {
@@ -37,7 +36,6 @@ function App() {
           </Route>
         </Routes>
       </div>
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </QueryClientProvider>
   );
 }

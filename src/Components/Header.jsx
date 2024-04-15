@@ -10,7 +10,6 @@ import { CgShoppingCart } from "react-icons/cg";
 import { useSelector } from "react-redux";
 const Header = () => {
   const product = useSelector((state) => state.cart);
-  // console.log(product.length);
   const location = useLocation();
   return (
     <>
@@ -188,4 +187,3 @@ const Header = () => {
 };
 
 export default Header;
-//
